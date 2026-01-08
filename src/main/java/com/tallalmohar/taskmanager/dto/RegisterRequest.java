@@ -4,7 +4,10 @@ package com.tallalmohar.taskmanager.dto;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.Getter;
 
+
+@Getter
 public class RegisterRequest {
     @NotBlank
     @Email
