@@ -16,6 +16,7 @@ public class Task {
     private long taskID;
     private String title;
     private String description;
+
     @Enumerated(EnumType.STRING)
     private Status status;
     private LocalDate dueDate;
@@ -24,4 +25,6 @@ public class Task {
     @JoinColumn(name="userID")
     private User user;
     private LocalDateTime createdAt;
+
+    public Task() { }
 }
