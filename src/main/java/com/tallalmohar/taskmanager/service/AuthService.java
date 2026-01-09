@@ -35,6 +35,7 @@ public class AuthService {
         user.setPassword(this.passwordEncoder.encode(registerRequest.getPassword()));
         userRepository.save(user);
     }
+
     //TODO : Create an AUTHRESPONSE (DONE)
     public AuthResponse login(LoginRequest loginRequest){
         User user = this.userRepository.findByEmail(loginRequest.getEmail());
