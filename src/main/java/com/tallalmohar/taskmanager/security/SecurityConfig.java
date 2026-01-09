@@ -13,12 +13,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
         private final JWTService jwtService;
         private final AuthService authService;
-        private final JWTAuthenticationFilter jwtAuthFilter;
 
-        public SecurityConfig(JWTService jwtService, AuthService authService, JWTAuthenticationFilter jwtAuthFilter) {
+        public SecurityConfig(JWTService jwtService, AuthService authService) {
                 this.jwtService = jwtService;
                 this.authService = authService;
-                this.jwtAuthFilter = jwtAuthFilter;
         }
 
         // TODO : Figure this out??
