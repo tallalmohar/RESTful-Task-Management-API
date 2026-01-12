@@ -1,14 +1,14 @@
 package com.tallalmohar.taskmanager.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
-import org.springframework.stereotype.Service;
+import lombok.NoArgsConstructor;
 
+
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 public class AuthResponse {
     private String token;
 
-    public AuthResponse(String token){
-        this.token = token;
-    }
 }

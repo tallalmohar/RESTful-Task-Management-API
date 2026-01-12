@@ -2,9 +2,15 @@ package com.tallalmohar.taskmanager.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
 public class TaskRequest {
     @NotBlank
     @Size(max = 255)
@@ -14,4 +20,5 @@ public class TaskRequest {
     private String description;
 
     private LocalDate dueDate;
+
 }

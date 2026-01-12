@@ -40,7 +40,7 @@ public class AuthService {
     public AuthResponse login(LoginRequest loginRequest){
         User user = this.userRepository.findByEmail(loginRequest.getEmail());
         if(user == null){
-            throw new RuntimeException("Authentication Failed");
+            throw new RuntimeException("Auth Failed");
         }
         if(!passwordEncoder.matches(loginRequest.getPassword(),user.getPassword())){
             throw new RuntimeException("Auth Failed"); //checks password
